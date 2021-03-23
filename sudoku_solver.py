@@ -13,7 +13,7 @@ game_board = [
 
 # solving function
 def solve(board):
-    find = find_empty(board)
+    find = starting_point(board)
     if not find:
         return True
     else:
@@ -56,10 +56,10 @@ def valid(board, number, position):
 
 
 # function to find the first empty cell in our game_board
-def find_empty(bo):
-    for i in range(len(bo)):
-        for j in range(len(bo[0])):
-            if bo[i][j] == 0:
+def starting_point(board):
+    for i in range(len(board)):
+        for j in range(len(board[0])):
+            if board[i][j] == 0:
                 return i, j  # row, col
 
     return None
